@@ -1,5 +1,5 @@
 //
-//  IzziAuth.swift
+//  IzziSession.swift
 //  authTest
 //
 //  Created by Despo on 01.04.25.
@@ -9,7 +9,7 @@ import Foundation
 
 @available(macOS 12.0, *)
 @available(iOS 16, *)
-public class IzziAuthManager {
+public class IzziSessionManager {
   
   public init() {}
   
@@ -40,7 +40,7 @@ public class IzziAuthManager {
 
 @available(macOS 12.0, *)
 @available(iOS 16, *)
-extension IzziAuthManager {
+extension IzziSessionManager {
   public func verifyTokenValidity<RequestModel: Codable, ResponseModel: Codable>(
     apiEndpoint: String,
     customRequestBuilder: ((String) -> RequestModel),
@@ -66,7 +66,7 @@ extension IzziAuthManager {
 
 @available(macOS 12.0, *)
 @available(iOS 16, *)
-extension IzziAuthManager {
+extension IzziSessionManager {
   public func verifyTokenValidity(
     apiEndpoint: String
   ) async throws {
@@ -81,7 +81,7 @@ extension IzziAuthManager {
 
 @available(macOS 12.0, *)
 @available(iOS 16, *)
-extension IzziAuthManager {
+extension IzziSessionManager {
   private func postData<T: Codable, U: Codable>(
     urlString: String,
     headers: [String: String]? = nil,
