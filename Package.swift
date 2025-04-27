@@ -2,16 +2,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "IzziSession",
-    platforms: [.iOS(.v16)],
-    products: [
-        .library(name: "IzziSession", targets: ["IzziSession"])
-    ],
-    targets: [
-        .binaryTarget(
-            name: "IzziSession",
-            url: "https://github.com/Desp0o/IzziSession/releases/download/v1.0.0/IzziSession.xcframework.zip",
-            checksum: "7fd6ecd104a14a3d66f14db731a29cfacfe021ffa52e8da1fb3646fc5955142e"
-        )
-    ]
+  name: "IzziAuth",
+  products: [
+    // Products define the executables and libraries a package produces, making them visible to other packages.
+    .library(
+      name: "IzziAuth",
+      targets: ["IzziAuth"]),
+  ],
+  targets: [
+    // Targets are the basic building blocks of a package, defining a module or a test suite.
+    // Targets can depend on other targets in this package and products from dependencies.
+    .target(
+      name: "IzziAuth")
+  ]
 )
